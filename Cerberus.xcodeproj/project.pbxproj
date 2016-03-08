@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4513689D1C8E590300C7115F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4513689C1C8E590300C7115F /* AppDelegate.swift */; };
+		4513689F1C8E590300C7115F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4513689E1C8E590300C7115F /* ViewController.swift */; };
+		451368A21C8E590300C7115F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451368A01C8E590300C7115F /* Main.storyboard */; };
+		451368A51C8E590300C7115F /* Cerberus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 451368A31C8E590300C7115F /* Cerberus.xcdatamodeld */; };
+		451368A71C8E590300C7115F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451368A61C8E590300C7115F /* Assets.xcassets */; };
+		451368AA1C8E590300C7115F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451368A81C8E590300C7115F /* LaunchScreen.storyboard */; };
+		451368B51C8E590300C7115F /* CerberusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451368B41C8E590300C7115F /* CerberusTests.swift */; };
+		451368C01C8E590300C7115F /* CerberusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451368BF1C8E590300C7115F /* CerberusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		451368B11C8E590300C7115F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 451368911C8E590300C7115F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 451368981C8E590300C7115F;
+			remoteInfo = Cerberus;
+		};
+		451368BC1C8E590300C7115F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 451368911C8E590300C7115F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 451368981C8E590300C7115F;
+			remoteInfo = Cerberus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		451368991C8E590300C7115F /* Cerberus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cerberus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4513689C1C8E590300C7115F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4513689E1C8E590300C7115F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		451368A11C8E590300C7115F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		451368A41C8E590300C7115F /* Cerberus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cerberus.xcdatamodel; sourceTree = "<group>"; };
+		451368A61C8E590300C7115F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		451368A91C8E590300C7115F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		451368AB1C8E590300C7115F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		451368B01C8E590300C7115F /* CerberusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CerberusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		451368B41C8E590300C7115F /* CerberusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerberusTests.swift; sourceTree = "<group>"; };
+		451368B61C8E590300C7115F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		451368BB1C8E590300C7115F /* CerberusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CerberusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		451368BF1C8E590300C7115F /* CerberusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerberusUITests.swift; sourceTree = "<group>"; };
+		451368C11C8E590300C7115F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		451368961C8E590300C7115F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451368AD1C8E590300C7115F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451368B81C8E590300C7115F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		451368901C8E590300C7115F = {
+			isa = PBXGroup;
+			children = (
+				4513689B1C8E590300C7115F /* Cerberus */,
+				451368B31C8E590300C7115F /* CerberusTests */,
+				451368BE1C8E590300C7115F /* CerberusUITests */,
+				4513689A1C8E590300C7115F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4513689A1C8E590300C7115F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				451368991C8E590300C7115F /* Cerberus.app */,
+				451368B01C8E590300C7115F /* CerberusTests.xctest */,
+				451368BB1C8E590300C7115F /* CerberusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4513689B1C8E590300C7115F /* Cerberus */ = {
+			isa = PBXGroup;
+			children = (
+				4513689C1C8E590300C7115F /* AppDelegate.swift */,
+				4513689E1C8E590300C7115F /* ViewController.swift */,
+				451368A01C8E590300C7115F /* Main.storyboard */,
+				451368A61C8E590300C7115F /* Assets.xcassets */,
+				451368A81C8E590300C7115F /* LaunchScreen.storyboard */,
+				451368AB1C8E590300C7115F /* Info.plist */,
+				451368A31C8E590300C7115F /* Cerberus.xcdatamodeld */,
+			);
+			path = Cerberus;
+			sourceTree = "<group>";
+		};
+		451368B31C8E590300C7115F /* CerberusTests */ = {
+			isa = PBXGroup;
+			children = (
+				451368B41C8E590300C7115F /* CerberusTests.swift */,
+				451368B61C8E590300C7115F /* Info.plist */,
+			);
+			path = CerberusTests;
+			sourceTree = "<group>";
+		};
+		451368BE1C8E590300C7115F /* CerberusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				451368BF1C8E590300C7115F /* CerberusUITests.swift */,
+				451368C11C8E590300C7115F /* Info.plist */,
+			);
+			path = CerberusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		451368981C8E590300C7115F /* Cerberus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 451368C41C8E590300C7115F /* Build configuration list for PBXNativeTarget "Cerberus" */;
+			buildPhases = (
+				451368951C8E590300C7115F /* Sources */,
+				451368961C8E590300C7115F /* Frameworks */,
+				451368971C8E590300C7115F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cerberus;
+			productName = Cerberus;
+			productReference = 451368991C8E590300C7115F /* Cerberus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		451368AF1C8E590300C7115F /* CerberusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 451368C71C8E590300C7115F /* Build configuration list for PBXNativeTarget "CerberusTests" */;
+			buildPhases = (
+				451368AC1C8E590300C7115F /* Sources */,
+				451368AD1C8E590300C7115F /* Frameworks */,
+				451368AE1C8E590300C7115F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				451368B21C8E590300C7115F /* PBXTargetDependency */,
+			);
+			name = CerberusTests;
+			productName = CerberusTests;
+			productReference = 451368B01C8E590300C7115F /* CerberusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		451368BA1C8E590300C7115F /* CerberusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 451368CA1C8E590300C7115F /* Build configuration list for PBXNativeTarget "CerberusUITests" */;
+			buildPhases = (
+				451368B71C8E590300C7115F /* Sources */,
+				451368B81C8E590300C7115F /* Frameworks */,
+				451368B91C8E590300C7115F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				451368BD1C8E590300C7115F /* PBXTargetDependency */,
+			);
+			name = CerberusUITests;
+			productName = CerberusUITests;
+			productReference = 451368BB1C8E590300C7115F /* CerberusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		451368911C8E590300C7115F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Sergii Arnaut";
+				TargetAttributes = {
+					451368981C8E590300C7115F = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					451368AF1C8E590300C7115F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 451368981C8E590300C7115F;
+					};
+					451368BA1C8E590300C7115F = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 451368981C8E590300C7115F;
+					};
+				};
+			};
+			buildConfigurationList = 451368941C8E590300C7115F /* Build configuration list for PBXProject "Cerberus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 451368901C8E590300C7115F;
+			productRefGroup = 4513689A1C8E590300C7115F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				451368981C8E590300C7115F /* Cerberus */,
+				451368AF1C8E590300C7115F /* CerberusTests */,
+				451368BA1C8E590300C7115F /* CerberusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		451368971C8E590300C7115F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				451368AA1C8E590300C7115F /* LaunchScreen.storyboard in Resources */,
+				451368A71C8E590300C7115F /* Assets.xcassets in Resources */,
+				451368A21C8E590300C7115F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451368AE1C8E590300C7115F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451368B91C8E590300C7115F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		451368951C8E590300C7115F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4513689F1C8E590300C7115F /* ViewController.swift in Sources */,
+				4513689D1C8E590300C7115F /* AppDelegate.swift in Sources */,
+				451368A51C8E590300C7115F /* Cerberus.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451368AC1C8E590300C7115F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				451368B51C8E590300C7115F /* CerberusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451368B71C8E590300C7115F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				451368C01C8E590300C7115F /* CerberusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		451368B21C8E590300C7115F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 451368981C8E590300C7115F /* Cerberus */;
+			targetProxy = 451368B11C8E590300C7115F /* PBXContainerItemProxy */;
+		};
+		451368BD1C8E590300C7115F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 451368981C8E590300C7115F /* Cerberus */;
+			targetProxy = 451368BC1C8E590300C7115F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		451368A01C8E590300C7115F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				451368A11C8E590300C7115F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		451368A81C8E590300C7115F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				451368A91C8E590300C7115F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		451368C21C8E590300C7115F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		451368C31C8E590300C7115F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		451368C51C8E590300C7115F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cerberus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.arnoid.Cerberus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		451368C61C8E590300C7115F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Cerberus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.arnoid.Cerberus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		451368C81C8E590300C7115F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CerberusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.arnoid.CerberusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cerberus.app/Cerberus";
+			};
+			name = Debug;
+		};
+		451368C91C8E590300C7115F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CerberusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.arnoid.CerberusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cerberus.app/Cerberus";
+			};
+			name = Release;
+		};
+		451368CB1C8E590300C7115F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CerberusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.arnoid.CerberusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cerberus;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		451368CC1C8E590300C7115F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CerberusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.arnoid.CerberusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Cerberus;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		451368941C8E590300C7115F /* Build configuration list for PBXProject "Cerberus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				451368C21C8E590300C7115F /* Debug */,
+				451368C31C8E590300C7115F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		451368C41C8E590300C7115F /* Build configuration list for PBXNativeTarget "Cerberus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				451368C51C8E590300C7115F /* Debug */,
+				451368C61C8E590300C7115F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		451368C71C8E590300C7115F /* Build configuration list for PBXNativeTarget "CerberusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				451368C81C8E590300C7115F /* Debug */,
+				451368C91C8E590300C7115F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		451368CA1C8E590300C7115F /* Build configuration list for PBXNativeTarget "CerberusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				451368CB1C8E590300C7115F /* Debug */,
+				451368CC1C8E590300C7115F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		451368A31C8E590300C7115F /* Cerberus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				451368A41C8E590300C7115F /* Cerberus.xcdatamodel */,
+			);
+			currentVersion = 451368A41C8E590300C7115F /* Cerberus.xcdatamodel */;
+			path = Cerberus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 451368911C8E590300C7115F /* Project object */;
+}
