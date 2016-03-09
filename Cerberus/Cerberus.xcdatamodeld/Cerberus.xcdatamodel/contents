@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
+    <entity name="Door" representedClassName=".CDoor" syncable="YES">
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="accessible_by" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="accessibleDoors" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="DoorAccessEvent" representedClassName=".CDoorAccessEvent" syncable="YES">
+        <attribute name="authorized" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="door" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Door" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName=".CUser" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="accessibleDoors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Door" inverseName="accessible_by" inverseEntity="Door" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Door" positionX="-171" positionY="51" width="128" height="120"/>
+        <element name="DoorAccessEvent" positionX="376" positionY="135" width="128" height="103"/>
+        <element name="User" positionX="16" positionY="243" width="128" height="30"/>
+    </elements>
 </model>

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Cerberus
 //
-//  Created by Sergii Arnaut on 08/03/16.
+//  Created by Sergii Arnaut on 05/03/16.
 //  Copyright © 2016 Sergii Arnaut. All rights reserved.
 //
 
@@ -13,10 +13,18 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var userController : UserController = UserController()
+    var doorController : DoorController = DoorController()
+    var uiNotificationController : UINotificationController = UINotificationController()
+    var loggedInUser: CUser! = nil
+    
+    static func getAppDelegate() -> AppDelegate {
+        return UIApplication.sharedApplication().delegate as! AppDelegate
+    }
 
+    func applicaton(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
         return true
     }
 
@@ -36,6 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        if(!isAppAlreadyLaunchedOnce()) {
+            userController.createUser(
+                CUser.ROOT_USER_NAME,
+                email: CUser.ROOT_USER_EMAIL,
+                password: CUser.ROOT_USER_PASSWORD)
+            
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -104,6 +120,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
                 abort()
             }
+        }
+    }
+    
+    func isAppAlreadyLaunchedOnce()->Bool{
+        
+        print(applicationDocumentsDirectory.path)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if ((defaults.stringForKey("isAppAlreadyLaunchedOnce")) != nil){
+            print("App already launched")
+            return true
+        }else{
+            defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
+            print("App launched first time")
+            return false
         }
     }
 
