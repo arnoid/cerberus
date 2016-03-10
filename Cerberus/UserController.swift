@@ -140,4 +140,7 @@ class UserController {
         getManagedContext().deleteObject(user)
     }
     
+    func checkIfRootUser(user: CUser) -> Bool{
+        return user.name == CUser.ROOT_USER_NAME && (user.email == CUser.ROOT_USER_EMAIL) && (user.password == CUser.ROOT_USER_PASSWORD)
+    }
 }

@@ -17,12 +17,16 @@ class UserTableViewController : UIViewController, UITableViewDataSource, UITable
     let currentUserCellIdentifier = "CurrentUserCell"
     
     var userController: UserController!
+    var uiNotificationController: UINotificationController!
     var userDataSource: [CUser] = [CUser]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userController = AppDelegate.getAppDelegate().userController
+        var appDelegate = AppDelegate.getAppDelegate()
+        
+        userController = appDelegate.userController
+        uiNotificationController = appDelegate.uiNotificationController
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -61,7 +65,7 @@ class UserTableViewController : UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if(CUser.checkIfRootUser(AppDelegate.getAppDelegate().loggedInUser)) {
+        if(userController.checkIfRootUser(AppDelegate.getAppDelegate().loggedInUser)) {
             //for root user only
             createNewUser()
         } else {
@@ -70,19 +74,25 @@ class UserTableViewController : UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func createNewUser() {
-        if(CUser.checkIfRootUser(AppDelegate.getAppDelegate().loggedInUser)) {
+        if(userController.checkIfRootUser(AppDelegate.getAppDelegate().loggedInUser)) {
         //for root user only
             self.performSegueWithIdentifier("ShowUserDetails", sender: self)
+        } else {
+            uiNotificationController.showFailMessage("Access denied", subtitle: "You need to be a root user to access this functionality")
         }
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if(CUser.checkIfRootUser(userDataSource[indexPath.row])
+        if(userController.checkIfRootUser(userDataSource[indexPath.row])
             || userDataSource[indexPath.row].objectID == AppDelegate.getAppDelegate().loggedInUser.objectID) {
             //restrict deletion of root user and current logged-in user
             return false
-        } else {
+        } else if (userController.checkIfRootUser(AppDelegate.getAppDelegate().loggedInUser)) {
+            //let edit for root user only
             return true
+        } else {
+            //other cases
+            return false
         }
     }
     

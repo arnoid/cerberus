@@ -22,7 +22,7 @@ class DoorLocationViewController : UIViewController, MKMapViewDelegate {
     var uiNotificationController : UINotificationController!
     
     let regionRadius: CLLocationDistance = 50
-
+    //TODO: Reconfigure later
     let initialLocation = CLLocation(latitude: 52.371669433095313, longitude: 4.909041686425617)
     
     let COUNTER_MAX_VALUE = 1000
@@ -123,7 +123,11 @@ class DoorLocationViewController : UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func openDoorsList() {
-        self.performSegueWithIdentifier("ShowDoorsList", sender: self)
+        if(userController.checkIfRootUser(AppDelegate.getAppDelegate().loggedInUser)) {
+            self.performSegueWithIdentifier("ShowDoorsList", sender: self)
+        } else {
+            uiNotificationController.showFailMessage("Access denied", subtitle: "You need to be a root user to access this functionality")
+        }
     }
     
 }

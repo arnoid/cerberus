@@ -22,7 +22,9 @@ class DoorDetailsViewController : UIViewController, MKMapViewDelegate {
     var doorController: DoorController!
     var uiNotificationController : UINotificationController!
     var door: CDoor?
-    
+
+    //TODO: Reconfigure later
+    let initialLocation = CLLocation(latitude: 52.371669433095313, longitude: 4.909041686425617)
     let regionRadius: CLLocationDistance = 50
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,6 +43,8 @@ class DoorDetailsViewController : UIViewController, MKMapViewDelegate {
         longPressRecogniser.minimumPressDuration = 1.0
         mapView.addGestureRecognizer(longPressRecogniser)
         
+        let mapCenterLocation: CLLocation!
+        
         if(selectedDoorObjectID != nil) {
             door = doorController.readDoorWith(selectedDoorObjectID)
             
@@ -53,11 +57,16 @@ class DoorDetailsViewController : UIViewController, MKMapViewDelegate {
             showAnnotationAtCoordinates(CLLocationCoordinate2D(latitude: door!.latitude, longitude: door!.longitude))
             
             mapView.addAnnotation(doorAnnotation)
-            let doorLocation = CLLocation(latitude: door!.latitude, longitude: door!.longitude)
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(doorLocation.coordinate,
-                regionRadius * 2.0, regionRadius * 2.0)
-            mapView.setRegion(coordinateRegion, animated: true)
+            mapCenterLocation = CLLocation(latitude: door!.latitude, longitude: door!.longitude)
+        } else {
+            mapCenterLocation = initialLocation
         }
+        
+
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(mapCenterLocation.coordinate,
+            regionRadius * 2.0, regionRadius * 2.0)
+        mapView.setRegion(coordinateRegion, animated: true)
+
     }
     
     func handleLongPress(getstureRecognizer : UIGestureRecognizer){
