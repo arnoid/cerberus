@@ -16,6 +16,7 @@ class DoorLocationViewController : UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var lblDoorLabel: UILabel!
     @IBOutlet var prgrLoadingProgress: UIProgressView!
+    @IBOutlet var btnOpenDoor: UIButton!
     
     var userController : UserController!
     var doorController : DoorController!
@@ -100,7 +101,8 @@ class DoorLocationViewController : UIViewController, MKMapViewDelegate {
             let doorOpened = doorController.openDoor(door!, byUser: AppDelegate.getAppDelegate().loggedInUser, timestamp: NSDate().timeIntervalSince1970)
             
             if(doorOpened) {
-                
+                btnOpenDoor.enabled = false
+
                 self.counter = 0
                 for _ in 0..<COUNTER_MAX_VALUE {
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
@@ -108,6 +110,7 @@ class DoorLocationViewController : UIViewController, MKMapViewDelegate {
                         dispatch_async(dispatch_get_main_queue(), {
                             self.counter++
                             if(self.counter == self.COUNTER_MAX_VALUE) {
+                                self.btnOpenDoor.enabled = true
                                 self.counter = 0
                                 self.uiNotificationController.showSuccessMessage("\(door!.name!)", subtitle: "Door is opened")
                             }

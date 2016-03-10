@@ -435,6 +435,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnOpenDoor" destination="0Vm-CT-a6M" id="h3L-KU-4mB"/>
                         <outlet property="lblDoorLabel" destination="zYW-cc-0wq" id="Xiz-t9-i7R"/>
                         <outlet property="mapView" destination="RmI-3A-prY" id="ApH-HO-9Nw"/>
                         <outlet property="prgrLoadingProgress" destination="lCt-By-AKp" id="NFe-wU-YOM"/>
